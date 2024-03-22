@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-PESA</title>
+  <style>
+    button{
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 12px;
+      margin: 2px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background-color: white;
+      bottom: beige;
+      border-width: 1px;
+      font-size: medium;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <h2>Safaricom</h2>
+  <button onclick="setTimeout(sendMoney,800);">Send Money</button>
+  <button>Withdraw Cash</button>
+  <button>Buy Airtime</button>
+  <button>Loans and Savings</button>
+  <button>Lipa na M-PESA</button>
+  <button>My Account</button>
+<script>
+  function sendMoney () {
+  let num =prompt("Enter Phone No");
+  let amount=prompt("Enter Amount");
+  let transCost;
+  if(amount>=0 && amount<500){
+    transCost==0.00;
+  }else if(amount>500 && amount<=10000){
+    transCost= amount*0.01;
+  }else{
+    transCost==110;
+  }
+  let name=prompt("Enter Name");
+  let pin=prompt("Enter Your M-PESA PIN");
+  alert("Send: "+amount+"To: "+name+"PhoneNumber: "+num+"Transaction Cost: "+transCost);
+  alert("Thank You for Using M-PESA Services");
+  }
+</script>
+  
+</body>
+</html>
